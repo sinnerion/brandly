@@ -1,0 +1,11 @@
+.logo {
+  width: 150px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+
+  @include breakpoint($large-bp) {
+    // display: inline-block;
+    // float: left;
+  }
+}

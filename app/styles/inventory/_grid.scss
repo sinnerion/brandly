@@ -1,0 +1,81 @@
+// Settings
+$columns: 12;
+$gutter: 30px;
+$halfGutter: $gutter / 2;
+$spanSize: 100 / $columns; // 8.33333
+
+
+// Row with clearfix on it
+.row {
+  @include clearfix;
+  margin-left: -$halfGutter;
+  margin-right: -$halfGutter;
+}
+
+// Column styling
+@mixin colStyle {
+  float: left;
+  margin-left: $halfGutter;
+  margin-right: $halfGutter;
+}
+
+
+// Calculates column width
+@function calcWidth($amount) {
+  @return percentage($spanSize * $amount) / 100;
+}
+
+// Mixin for setting column width
+@mixin col($amount) {
+  @include colStyle;
+  $totalWidth: calcWidth($amount);
+  width: calc(#{$totalWidth} - #{$gutter}); // prints values inside css function
+}
+@mixin right($amount) {
+  $totalWidth: calcWidth($amount);
+  $halfGutter: $gutter / 2;
+  margin-right: calc(#{$totalWidth} + #{$halfGutter});
+}
+@mixin left($amount) {
+  $totalWidth: calcWidth($amount);
+  $halfGutter: $gutter / 2;
+  margin-left: calc(#{$totalWidth} + #{$halfGutter});
+}
+
+
+// Classes for columns, left and right push classes.
+@for $i from 1 through $columns {
+  // Makes class for each column
+  .col#{$i} { @include col($i); }
+  // Makes right push class for each column
+  .right#{$i} { @include right($i); }
+  // Makes left push class for each column
+  .left#{$i} { @include left($i); }
+}
+
+// Classes for medium screens
+@include breakpoint($small-bp) {
+  @for $i from 1 through $columns {
+    .col#{$i}--m { @include col($i); }
+    .right#{$i}--m { @include right($i); }
+    .left#{$i}--m { @include left($i); }
+  }
+}
+
+// Classes for big screens
+@include breakpoint($medium-bp) {
+  @for $i from 1 through $columns {
+    .col#{$i}--l { @include col($i); }
+    .right#{$i}--l { @include right($i); }
+    .left#{$i}--l { @include left($i); }
+  }
+}
+
+// Classes for bigger screens
+@include breakpoint($large-bp) {
+  @for $i from 1 through $columns {
+    .col#{$i}--xl { @include col($i); }
+    .right#{$i}--xl { @include right($i); }
+    .left#{$i}--xl { @include left($i); }
+  }
+}

@@ -1,0 +1,37 @@
+// Spacings
+$space-xxs: 5px;
+$space-xs: 8px;
+$space-s: 10px;
+$space-m: 20px;
+$space-l: 40px;
+$space-xl: 80px;
+
+// Borders
+$border-style: solid;
+$border-width: 2px;
+$border-radius: 3px;
+
+// Animations
+$duration: .3s;
+$timing: ease;
+
+// Sidebar
+$sidebar-width: 320px;
+
+
+// Floats
+.left { float: left; }
+.right { float: right; }
+.no-float { float: none; }
+.clearfix { @include clearfix; }
+.clear { clear: both; }
+
+// Text aligns
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+
+// Display styles
+.hide { display: none; }
+.block { display: block; }

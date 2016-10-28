@@ -1,0 +1,30 @@
+.btn {
+  display: inline-block;
+  padding: $space-xs $space-s;
+  background-color: $primary;
+  color: $alt-color;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 0 $primary-dark;
+
+  &.hover, // hover state preview
+  &:hover {
+    transform: translateY(1px);
+    box-shadow: 0 3px 0 $primary-dark;
+  }
+
+  &.active, // active state preview
+  &:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 $primary-dark;
+  }
+
+  &:disabled {
+    background: $grey2;
+    cursor: not-allowed;
+    box-shadow: 0 1px 0 $grey3;
+
+    &:hover {
+      top: 0;
+    }
+  }
+}

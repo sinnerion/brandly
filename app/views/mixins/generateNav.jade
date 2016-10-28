@@ -1,0 +1,14 @@
+mixin generateNav(className)
+
+  //- Loop through nav items
+  each name in navItems
+
+    //- Create url from name
+    - var url = '#' + name.replace(/\s/g , '_').toLowerCase()
+
+    //- Redefines url when homepage
+    if name === 'Home'
+      - var url = '/'
+
+    //- Creates list-item with link for each name/url
+    a(class='#{className} js-navlink' href=url)= name

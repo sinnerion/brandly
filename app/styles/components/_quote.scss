@@ -1,0 +1,27 @@
+blockquote {
+  position: relative;
+  font-style: italic;
+  color: $white;
+  background-color: $primary-dark;
+  padding: $space-m;
+
+  &:before, &:after {
+    position: relative;
+    display: inline;
+    font-size: 3em;
+    font-style: normal;
+    font-weight: bold;
+    bottom: -20px;
+    color: $primary;
+  }
+
+  &:before {
+    content: open-quote;
+    padding-right: $space-s;
+  }
+
+  &:after {
+    content: close-quote;
+    padding-left: $space-s;
+  }
+}

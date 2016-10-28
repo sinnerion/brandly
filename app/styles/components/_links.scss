@@ -1,0 +1,16 @@
+.lnk {
+  color: $base-color;
+  border-bottom: dashed 1px $base-color;
+  margin-bottom: 10px;
+
+  &:hover, &.hover {
+    color: $primary-dark;
+    border-color: $primary-dark;
+  }
+
+  &:active, &.active {
+    color: $primary-dark;
+    border-color: $primary-dark;
+    border-bottom-style: solid;
+  }
+}

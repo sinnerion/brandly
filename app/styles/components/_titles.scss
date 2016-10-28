@@ -1,0 +1,41 @@
+@mixin title-styling {
+  font-family: $heading-family;
+  font-weight: $heading-weight;
+  line-height: $heading-line-height;
+  margin-bottom: $space-s;
+}
+
+.title--xxl {
+  @include title-styling;
+  @include scaleText(3em);
+}
+
+.title--xl {
+  @include title-styling;
+  @include scaleText(2.4em);
+}
+
+.title--l {
+  @include title-styling;
+  @include scaleText(2em);
+}
+
+.title--m {
+  @include title-styling;
+  @include scaleText(1.6em);
+}
+
+.title--s {
+  @include title-styling;
+  @include scaleText(1.4em);
+}
+
+.title--xs {
+  @include title-styling;
+  @include scaleText(1.2em);
+}
+
+.title--xxs {
+  @include title-styling;
+  @include scaleText(1.1em);
+}

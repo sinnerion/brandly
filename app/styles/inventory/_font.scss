@@ -1,0 +1,32 @@
+//TYPOGRAPHY
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600,400);
+
+// Body
+$body-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$body-weight: 300;
+$body-weight-bold: 600;
+$body-line-height: 1.5em;
+
+// Headings
+$heading-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$heading-weight: 600;
+$heading-line-height: 1.5em;
+
+// Icons
+$icon-font: 'FontAwesome';
+$icon-size: 1.2em;
+
+// Sizes
+$size-s: 0.8em;
+$size-m: 16px;
+$size-l: 1.3em;
+$base-size: $size-m;
+
+
+// Font sizes
+.size-small { font-size: .92em; }
+.size-medium { font-size: 1.1em; }
+.size-large { font-size: 1.2em; }
+.size-xlarge { font-size: 1.6em; line-height: 1.2; }
+.size-huge { font-size: 2em; line-height: 1.25; }
+.size-xhuge { font-size: 3em; line-height: 1.3; }

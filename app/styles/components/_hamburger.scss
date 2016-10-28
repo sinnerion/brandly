@@ -1,0 +1,13 @@
+// Hamburger styling
+.hamburger {
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+}
+
+// hides hamburger on big screens
+@include breakpoint($large-bp) {
+  .hamburger {
+    display: none !important;
+  }
+}

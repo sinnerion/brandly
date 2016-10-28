@@ -1,0 +1,17 @@
+td {
+  padding: 10px;
+  border: 1px solid $primary-light;
+}
+
+th {
+  background-color: $primary-dark;
+  color: $white;
+  padding: 10px 20px;
+
+  &:first-child {
+    border-radius: 5px 0 0 0;
+  }
+  &:last-child {
+    border-radius: 0 5px 0 0;
+  }
+}

@@ -1,0 +1,22 @@
+$container: 1200px;
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+
+@mixin container {
+  padding: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+
+.container {
+  @include container;
+  position: relative;
+  left: 0;
+  padding-top: 50px;
+}

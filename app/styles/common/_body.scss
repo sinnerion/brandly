@@ -1,0 +1,15 @@
+@include global-reset;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  font: $body-weight $base-size $body-family;
+  color: $base-color;
+  background-color: $white;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}

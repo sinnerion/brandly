@@ -1,0 +1,27 @@
+@import "vars";
+body {
+  font-family: $main-font, sans-serif;
+}
+a,
+p a,
+ul li a {
+  cursor: pointer !important;
+  font-family: $main-font, sans-serif;
+}
+
+ul li a {
+  color: $light-txt;
+}
+
+a .menu-line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: $accent-color;
+  margin-bottom: 3px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}

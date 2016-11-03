@@ -1,0 +1,122 @@
+@import "vars";
+
+.main-header {
+  &_top {
+    position: absolute;
+    top: 0;
+    padding-top: 25px;
+    width: 100%;
+    z-index: 50;
+  }
+}
+
+.main-nav {
+  background: transparent;
+  ul li a {
+    color: $light-txt;
+    &:hover {
+      background: transparent;
+      color: darken($light-txt, 15%);
+    }
+  }
+}
+
+.main-nav_small .uk-offcanvas-bar {
+  background: $dark-bg;
+  padding: 15px 10px;
+  border-left: 4px solid darken($dark-bg, 4%);
+  -webkit-box-shadow: inset 2px 0 5px lighten($dark-bg, 2%);
+  -moz-box-shadow: inset 2px 0 5px lighten($dark-bg, 2%);
+  box-shadow: inset 2px 0 5px lighten($dark-bg, 2%);
+  li {
+    border-bottom: 1px solid darken($dark-bg, 10%);
+    -webkit-box-shadow: 0 2px 0px lighten($dark-bg, 4%);
+    -moz-box-shadow: 0 2px 0px lighten($dark-bg, 4%);
+    box-shadow: 0 2px 0px lighten($dark-bg, 4%);
+  }
+}
+
+.main-nav_small-toggle {
+  background: transparent;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  &:after,
+  &:before {
+    display: none;
+  }
+}
+
+.slider {
+  &-item {
+    position: relative;
+    text-align: center;
+    padding-top: 250px;
+    margin-bottom: 50px;
+    line-height: 50px;
+    color: $light-txt;
+    &_img {
+      position: absolute;
+      top: 0;
+      z-index: 0;
+    }
+    &_description {
+      position: relative;
+      z-index: 20;
+      .description-title {
+        display: block;
+        font-size: 30px;
+        font-family: $light-font;
+        margin-bottom: 10px;
+      }
+      .description-body {
+        font-family: $accent-black-font;
+        font-size: 60px;
+        margin-bottom: 50px;
+        span {
+          display: block;
+          font-size: 30px;
+          font-family: $light-font;
+          margin-top: 15px;
+        }
+      }
+      .slider-btn {
+        font-size: 18px;
+        line-height: 60px;
+        text-transform: uppercase;
+        padding: 0 50px;
+        border: 2px solid $light-txt;
+        color: $light-txt;
+        background-color: transparent;
+      }
+    }
+  }
+  .owl-dots {
+    position: relative;
+    text-align: center;
+    bottom: 30px;
+    .owl-dot {
+      vertical-align: middle;
+      height: 12px;
+      width: 12px;
+      background: $light-txt;
+      display: inline-block;
+      margin-right: 10px;
+      border-radius: 50%;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover,
+      &.active {
+        background: transparent;
+        border: 2px solid $light-txt;
+        margin-right: 6px;
+        &:last-child {
+          margin-right: 0;
+          margin-left: -4px;
+        }
+      }
+    }
+  }
+
+}

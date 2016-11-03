@@ -1,8 +1,0 @@
-.nav {
-  float: right;
-  display: none;
-
-  @include breakpoint($large-bp) {
-    display: inline-block;
-  }
-}
